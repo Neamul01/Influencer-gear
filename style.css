@@ -1,0 +1,325 @@
+/* common styles  */
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+.container {
+    width: 1200px;
+}
+
+/*---------------------
+ navigation menu 
+--------------------- */
+
+header {
+    display: flex;
+    justify-content: center;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 24px;
+}
+
+.site-nav {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+
+}
+
+.site-nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav ul li {
+    list-style: none;
+    padding: 5px;
+    margin: 5px 10px;
+
+}
+
+.site-nav ul span {
+    margin: 2px 10px;
+}
+
+.site-nav>span {
+    margin: 5px;
+    padding: 5px;
+    margin-left: 20px;
+
+}
+
+
+
+/*---------------------
+ hero area 
+--------------------- */
+
+.hero-area {
+    margin-top: 40px;
+}
+
+.hero-banner {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 5em;
+}
+
+.banner-text>h1 {
+    font-size: 52px;
+    margin: 20px 0;
+}
+
+.banner-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+
+}
+
+.banner-text a {
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #E02C6D;
+    color: #fff;
+    padding: 5px 25px 5px 30px;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+
+}
+
+/* animation start */
+.banner-text a:hover {
+    animation: model 2s ease-in-out;
+}
+
+@keyframes model {
+    0% {
+        left: 0px;
+
+    }
+
+    50% {
+        left: -40px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+/* animation end  */
+
+.banner-text a i {
+    margin-left: 10px;
+}
+
+.banner-image {
+    max-width: 42%;
+    margin-right: 30px;
+    background-image: url(images/Circle\ design.svg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.banner-image img {
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+
+}
+
+/* transformation  */
+
+.banner-image:hover {
+    transform: scaleX(1.2);
+
+}
+
+
+/* hero sites */
+.hero-sites {
+    margin-top: 60px;
+}
+
+.hero-sites ul {
+    display: flex;
+    justify-content: center;
+
+}
+
+.hero-sites ul li {
+    list-style: none;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+
+
+}
+
+.vector-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+}
+
+
+/*---------------------
+collection area 
+--------------------- */
+.collection-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.collections>h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.collection-intems {
+    display: grid;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.collection-item {
+    font-family: 'Merriweather', serif;
+    width: 300px;
+    padding: 17px 14px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 35px grey;
+
+}
+
+.collection-item h2 {
+    font-size: 22px;
+    margin: 16px 0 0 0;
+}
+
+.collection-item h3 {
+    font-size: 19px;
+    margin: 6px 0 6px 0;
+}
+
+.stars {
+    font-size: 12px;
+}
+
+.filled-star, .half-filled-star {
+    color: #FB8200;
+}
+
+.item-info p {
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.collections>a {
+    color: #E02C6D;
+    margin-top: 50px;
+    float: right;
+    text-decoration: none;
+
+}
+
+.collections>a>span {
+    padding-left: 5px;
+}
+
+
+/*------------------
+ footer area 
+------------------ */
+
+footer {
+    background-color: #0A0826;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.footer h3 {
+    margin: 3px;
+    word-spacing: 1.5px;
+    letter-spacing: 1px;
+}
+
+
+.copyright {
+    margin: 3px 17px;
+    font-size: 14px;
+}
+
+.footer-icon i {
+    margin-left: 24px;
+    font-size: 18px;
+}
+
+
+/*-----------------------
+ media query
+---------------------- */
+
+/* mobile device */
+@media only screen and (max-width :688px) {
+    .site-nav ul {
+        display: none;
+    }
+
+    .banner-content {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    .banner-text>h1 {
+        font-size: 40px;
+    }
+
+    .hero-sites ul {
+        flex-wrap: wrap;
+    }
+
+    .collection-intems {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* tablet device */
+
+@media only screen and (min-width :699px) and (max-width :992px) {
+    .hero-sites ul {
+        flex-wrap: wrap;
+    }
+
+    .collection-intems {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+}
